@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fredoka", sans-serif;
+    /* Google Font */
+}
+
+body {
+    background: linear-gradient(135deg, #fde2e4, #e0f4ff);
+}
+
+/* ===== SECTION ===== */
+.pricing-section {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.pricing-section h1 {
+    font-size: 36px;
+    color: #ff6f91;
+    margin-bottom: 50px;
+}
+
+/* ===== FLEXBOX ===== */
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* ===== CARDS ===== */
+.pricing-card {
+    background: #fff;
+    width: 280px;
+    padding: 35px 25px;
+    border-radius: 24px;
+    box-shadow: 0 12px 25px rgba(255, 111, 145, 0.25);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 35px rgba(255, 111, 145, 0.35);
+}
+
+.pricing-card h2 {
+    color: #845ec2;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 34px;
+    font-weight: bold;
+    color: #ff9671;
+    margin: 20px 0;
+}
+
+.pricing-card ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.pricing-card li {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+/* ===== BUTTON ===== */
+.pricing-card button {
+    background: #ff6f91;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.pricing-card button:hover {
+    background: #ff4d6d;
+    transform: scale(1.05);
+}
+
+/* ===== FEATURED ===== */
+.featured {
+    background: #fff0f6;
+    border: 3px dashed #ff6f91;
+    transform: scale(1.08);
+}
+
+/* ===== RIBBON ===== */
+.ribbon {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background: #ff6f91;
+    color: white;
+    padding: 6px 14px;
+    font-size: 13px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featured {
+        transform: scale(1);
+    }
+}

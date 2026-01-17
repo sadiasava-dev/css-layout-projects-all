@@ -1,0 +1,76 @@
+```body {
+    margin: 0;
+    font-family: Arial, sans-serif;}
+/* ===== GRID for Page Layout ===== */
+.page {
+    display: grid;
+    grid-template-columns: 200px 1fr 250px;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* Full-width sections */
+header {
+    grid-column: 1 / 4;
+    background: #2b6cb0;
+    color: white;
+    padding: 20px;
+}
+
+nav {
+    grid-column: 1 / 4;
+    background: #9c5791;
+    padding: 15px;
+    color: white;
+}
+
+/* Sidebars */
+.left {
+    background: #3d7810;
+    padding: 20px;
+color: white;
+}
+.right {
+    background: #540404;
+    padding: 20px;
+    color: white;
+}
+
+/* Main */
+main {
+    background: #2f052a;
+    padding: 20px;
+    color: white;
+}
+
+/* Footer */
+footer {
+    grid-column: 1 / 4;
+    background: #1a202c;
+    color: white;
+    padding: 15px;
+}
+
+/* ===== FLEXBOX for Centering ===== */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto;
+    }
+
+    header,
+    nav,
+    main,
+    .left,
+    .right,
+    footer {
+        grid-column: 1 / 2;
+    }
+}

@@ -1,0 +1,219 @@
+/* DARK PASTEL GOTH THEME COLORS */
+:root {
+    --bg: #031d368a;
+    --card: #1a1a2a;
+    --text: #eae6f2;
+    --muted: #b8a9c9;
+    --accent: #d16ba5;
+    --accent2: #6b5b95;
+    --shadow: rgba(0, 0, 0, 0.55);
+}
+
+/* GLOBAL STYLING */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* HEADER */
+.site-header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--accent2), #1a1a2a);
+    color: var(--text);
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 2.4rem;
+}
+
+.site-header p {
+    margin: 8px 0 0;
+    font-size: 1.1rem;
+    color: var(--muted);
+}
+
+/* FIXED CHAT WIDGET */
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 260px;
+    background: var(--card);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px var(--shadow);
+    overflow: hidden;
+}
+
+.chat-header {
+    background: linear-gradient(135deg, var(--accent), #2b1a2f);
+    color: var(--text);
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-body {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-body input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    background: #1f1f33;
+    color: var(--text);
+}
+
+.send-btn {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: var(--accent);
+    color: var(--text);
+    cursor: pointer;
+}
+
+/* STICKY ELEMENT (RELATIVE UNTIL SCROLL) */
+.sticky-section {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sticky-box {
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    background: var(--card);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px var(--shadow);
+    position: sticky;
+    top: 10px;
+}
+
+.sticky-box h2 {
+    margin: 0;
+    color: var(--text);
+}
+
+.sticky-box p {
+    color: var(--muted);
+}
+
+/* IMAGE WITH OVERLAY */
+.image-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.image-card {
+    position: relative;
+    width: 450px;
+    margin: auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px var(--shadow);
+}
+
+.image-card img {
+    width: 100%;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-card:hover .overlay {
+    opacity: 1;
+}
+
+/* TABLE WITH STICKY HEADER */
+.table-section {
+    padding: 40px 20px;
+}
+
+.table-wrap {
+    max-width: 900px;
+    margin: auto;
+    overflow: auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px var(--shadow);
+    background: var(--card);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #333;
+    text-align: left;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background: #2b1a2f;
+    color: var(--text);
+}
+
+/* TOOLTIP */
+.tooltip-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 12px;
+    background: var(--card);
+    box-shadow: 0 10px 25px var(--shadow);
+    cursor: pointer;
+    color: var(--text);
+}
+
+.tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2b1a2f;
+    color: var(--text);
+    padding: 8px 10px;
+    border-radius: 8px;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;}

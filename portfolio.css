@@ -1,0 +1,113 @@
+/* Global */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7fafc;
+}
+
+/* Sticky Navigation */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: #2b6cb0;
+    padding: 10px;
+    z-index: 100;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 40px;
+    background: #bee3f8;
+}
+
+/* Main Layout using Flexbox */
+.layout {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.project-card {
+    background: #edf2f7;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Tooltip using positioning */
+.tooltip {
+    position: relative;
+}
+
+.tooltip-text {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    display: none;
+}
+
+.tooltip:hover .tooltip-text {
+    display: block;
+}
+
+/* Footer */
+footer {
+    background: #1a202c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2b6cb0;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+}
